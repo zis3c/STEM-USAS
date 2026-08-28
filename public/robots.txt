@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://stemusas.com/sitemap.xml
+Sitemap: https://stem.zis3c.dev/sitemap.xml
