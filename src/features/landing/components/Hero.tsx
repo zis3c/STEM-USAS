@@ -8,7 +8,7 @@ export default function Hero() {
   const badge = useDecodeText(t.hero.badge)
 
   return (
-    <section id="top" className="relative flex min-h-screen items-center overflow-hidden pt-14">
+    <section id="top" className="relative flex min-h-screen items-center overflow-hidden pt-24 md:pt-28">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:44px_44px] [mask-image:radial-gradient(ellipse_75%_65%_at_50%_40%,black,transparent)]" />
         <div className="animate-hero-glow absolute -left-32 top-16 h-96 w-96 rounded-full bg-stem-blue/40 blur-[130px]" />
@@ -34,12 +34,12 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto w-full max-w-4xl px-4 py-24 text-center md:px-6">
-        <div className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-stem-gold/25 bg-stem-gold/[0.07] px-4 py-1.5 backdrop-blur-sm">
-          <span className="relative flex h-1.5 w-1.5">
+        <div className="animate-fade-up inline-flex max-w-[95vw] sm:max-w-none items-center gap-2 rounded-full border border-stem-gold/25 bg-stem-gold/[0.07] px-3.5 py-1.5 sm:px-4 backdrop-blur-sm">
+          <span className="relative flex h-1.5 w-1.5 shrink-0">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
           </span>
-          <span className="font-mono text-[10px] font-semibold tracking-[0.18em] text-stem-goldlight md:text-[11px]">
+          <span className="font-mono text-[9px] font-semibold tracking-wider text-stem-goldlight sm:text-[10px] sm:tracking-[0.16em] md:text-[11px] whitespace-nowrap">
             {badge}
           </span>
         </div>
@@ -68,7 +68,7 @@ export default function Hero() {
         >
           <button
             onClick={() => scrollToId('join')}
-            className="group flex w-full items-center justify-center gap-2 rounded-full bg-stem-gold px-7 py-3 text-sm font-bold text-stem-bg shadow-[0_0_28px_rgba(204,145,43,0.35)] transition hover:scale-[1.03] hover:bg-stem-goldlight active:scale-[0.98] sm:w-auto"
+            className="group inline-flex items-center justify-center gap-2 rounded-full bg-stem-gold px-6 py-2.5 text-xs font-bold text-stem-bg shadow-[0_0_24px_rgba(204,145,43,0.3)] transition hover:scale-[1.03] hover:bg-stem-goldlight active:scale-[0.98] sm:px-7 sm:py-3 sm:text-sm"
           >
             {t.hero.ctaPrimary}
             <ArrowRight size={15} className="transition group-hover:translate-x-0.5" />

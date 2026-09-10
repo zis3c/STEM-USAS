@@ -5,7 +5,8 @@ import NotFound from './features/landing/components/NotFound'
 import './styles/index.css'
 
 const path = window.location.pathname
-const Component = path === '/' ? App : NotFound
+const isKnownPath = path === '/' || path === '/stemcraft' || path.startsWith('/stemcraft')
+const Component = isKnownPath ? App : NotFound
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

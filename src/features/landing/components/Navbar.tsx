@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react'
 import { useLang } from '@/shared/i18n/LanguageContext'
 import { scrollToId } from '@/shared/lib/scroll'
 import type { Lang } from '@/shared/i18n/translations'
+import StemcraftBanner from './StemcraftBanner'
 
 export default function Navbar() {
   const { lang, setLang, t } = useLang()
@@ -20,7 +21,6 @@ export default function Navbar() {
     { id: 'about', label: t.nav.about },
     { id: 'programs', label: t.nav.programs },
     { id: 'projects', label: t.nav.projects },
-    { id: 'hosting', label: t.nav.hosting },
     { id: 'team', label: t.nav.team },
     { id: 'faq', label: t.nav.faq },
     { id: 'join', label: t.nav.join },
@@ -54,10 +54,11 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-stem-bg/80 backdrop-blur-md'
-          : 'bg-transparent'
+          ? 'bg-stem-bg/95 backdrop-blur-md shadow-lg shadow-black/30'
+          : 'bg-stem-bg/40 backdrop-blur-sm'
       }`}
     >
+      <StemcraftBanner />
       <nav className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 md:px-6">
         <button onClick={handleLogoClick} className="group flex items-center gap-2.5">
           <img
@@ -111,10 +112,17 @@ export default function Navbar() {
 
       <div
         className={`overflow-hidden border-b border-white/[0.06] bg-stem-bg/95 backdrop-blur-md transition-all duration-300 md:hidden ${
-          open ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'
+          open ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="flex flex-col gap-1 px-4 py-3">
+        <div className="space-y-1 px-4 py-4">
+          <a
+            href="/stemcraft"
+            className="flex items-center justify-between rounded-xl border border-emerald-500/40 bg-emerald-950/40 px-3 py-2 text-xs font-semibold text-emerald-300"
+          >
+            <span>🎮 STEMcraft (Minecraft Server)</span>
+            <span className="rounded bg-emerald-500/20 px-1.5 py-0.5 text-[9px] font-pixel text-emerald-400">ONLINE</span>
+          </a>
           {links.map((l) => (
             <button
               key={l.id}

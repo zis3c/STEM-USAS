@@ -10,7 +10,6 @@ export default function Footer() {
     { id: 'about', label: t.nav.about },
     { id: 'programs', label: t.nav.programs },
     { id: 'projects', label: t.nav.projects },
-    { id: 'hosting', label: t.nav.hosting },
     { id: 'team', label: t.nav.team },
     { id: 'faq', label: t.nav.faq },
     { id: 'join', label: t.nav.join },
@@ -99,20 +98,20 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/[0.05] pt-6 md:flex-row">
-          <p className="text-[11px] text-stem-muted">
-            © {year} STEM USAS - Persatuan Sains Teknologi & Multimedia. {t.footer.rights}
+        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/[0.05] pt-6 text-center md:flex-row md:text-left">
+          <p className="text-[11px] leading-relaxed text-stem-muted text-center md:text-left">
+            © {year} STEM USAS • Persatuan Sains Teknologi & Multimedia. {t.footer.rights}
           </p>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-2">
             <button
               onClick={() => window.dispatchEvent(new CustomEvent('trigger-matrix'))}
-              className="font-mono text-[9px] uppercase tracking-widest text-stem-muted/30 transition hover:text-emerald-400 focus:outline-none"
+              className="font-mono text-[9px] uppercase tracking-widest text-stem-muted/40 transition hover:text-emerald-400 focus:outline-none"
               title="Override System"
             >
               System: Online
             </button>
             <span className="text-white/10">•</span>
-            <p className="font-mono text-[10px] uppercase tracking-widest text-white/25">
+            <p className="font-mono text-[10px] uppercase tracking-widest text-white/30 text-center">
               {t.footer.made}
             </p>
           </div>

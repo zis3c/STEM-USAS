@@ -188,10 +188,6 @@ const en = {
         a: 'The membership fee is RM 10 per year.',
       },
       {
-        q: 'How do I request FYP web hosting?',
-        a: 'Reach out to our team directly on Telegram at <a href="https://t.me/STEMUSAS" target="_blank" class="text-stem-gold hover:underline">t.me/STEMUSAS</a> and provide your GitHub repository link. We will guide you through the rest.',
-      },
-      {
         q: 'When are your regular meetups?',
         a: 'We usually hold workshops and meetups twice a month.',
       },
@@ -392,10 +388,6 @@ const ms: Dict = {
       {
         q: 'Berapa yuran pendaftaran kelab?',
         a: 'Yuran keahlian adalah sebanyak RM 10 untuk setahun.',
-      },
-      {
-        q: 'Macam mana nak mohon hosting FYP?',
-        a: 'Hubungi pasukan kami secara terus melalui Telegram di <a href="https://t.me/STEMUSAS" target="_blank" class="text-stem-gold hover:underline">t.me/STEMUSAS</a> dan berikan pautan repositori GitHub anda. Kami akan bantu uruskan selebihnya.',
       },
       {
         q: 'Bila perjumpaan kelab diadakan?',

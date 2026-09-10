@@ -23,6 +23,7 @@ export default {
         display: ['"Space Grotesk"', 'Inter', 'sans-serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
+        pixel: ['"Press Start 2P"', '"VT323"', 'monospace'],
       },
       animation: {
         float: 'float 7s ease-in-out infinite',
