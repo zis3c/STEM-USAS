@@ -35,13 +35,11 @@ export default function App() {
 
   useEffect(() => {
     document.title = isStemcraft
-      ? 'STEM USAS'
-      : 'STEM USAS - Persatuan Sains Teknologi & Multimedia'
+      ? 'STEMCRAFT'
+      : 'STEM USAS'
   }, [isStemcraft])
 
   useEffect(() => {
-    if (isStemcraft) return
-
     const instance = new Lenis({ lerp: 0.1, wheelMultiplier: 0.9, smoothWheel: true })
     setLenis(instance)
     let raf = 0
@@ -55,7 +53,7 @@ export default function App() {
       instance.destroy()
       setLenis(null)
     }
-  }, [isStemcraft])
+  }, [])
 
   if (isStemcraft) {
     return (
@@ -67,7 +65,7 @@ export default function App() {
 
   return (
     <LanguageProvider>
-      <div className="min-h-screen overflow-x-clip bg-stem-bg font-sans text-stem-ink animate-dramatic">
+      <div className="min-h-screen overflow-x-clip bg-stem-bg font-sans text-stem-ink">
         <ScrollProgress />
         <Navbar />
         <main>
