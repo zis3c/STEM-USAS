@@ -118,10 +118,17 @@ export default function Navbar() {
         <div className="space-y-1 px-4 py-4">
           <a
             href="/stemcraft"
+            onClick={(e) => {
+              e.preventDefault()
+              setOpen(false)
+              window.history.pushState({}, '', '/stemcraft')
+              window.dispatchEvent(new PopStateEvent('popstate'))
+              window.scrollTo({ top: 0, behavior: 'instant' })
+            }}
             className="flex items-center justify-between rounded-xl border border-emerald-500/40 bg-emerald-950/40 px-3 py-2 text-xs font-semibold text-emerald-300"
           >
             <span>🎮 STEMcraft (Minecraft Server)</span>
-            <span className="rounded bg-emerald-500/20 px-1.5 py-0.5 text-[9px] font-pixel text-emerald-400">ONLINE</span>
+            <span className="rounded-full bg-emerald-500/20 px-2 py-0.5 text-[10px] font-bold tracking-wider text-emerald-400">ONLINE</span>
           </a>
           {links.map((l) => (
             <button

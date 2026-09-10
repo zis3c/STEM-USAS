@@ -6,17 +6,23 @@ export default function StemcraftBanner() {
 
   if (closed) return null
 
-  const goToStemcraft = () => {
-    window.location.href = '/stemcraft'
+  const goToStemcraft = (e?: React.MouseEvent) => {
+    if (e) e.preventDefault()
+    window.history.pushState({}, '', '/stemcraft')
+    window.dispatchEvent(new PopStateEvent('popstate'))
+    window.scrollTo({ top: 0, behavior: 'instant' })
   }
 
   return (
     <div className="relative border-b border-emerald-500/30 bg-[#061426]/95 backdrop-blur-md px-3 py-1.5 text-xs text-slate-200">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3">
         <div className="flex items-center gap-2 overflow-hidden truncate">
-          <span className="flex shrink-0 items-center gap-1 rounded bg-emerald-500/20 px-2 py-0.5 font-pixel text-[9px] text-emerald-400 border border-emerald-500/40">
-            <Gamepad2 size={11} />
-            EVENT CUTI
+          <span
+            className="flex shrink-0 items-center justify-center rounded-full bg-emerald-500/15 p-1 text-emerald-400 border border-emerald-500/30"
+            title="EVENT CUTI"
+            aria-label="EVENT CUTI"
+          >
+            <Gamepad2 size={13} />
           </span>
           <span className="truncate text-slate-300 text-[11px] sm:text-xs">
             Server Minecraft rasmi <strong className="text-white font-semibold">STEMcraft</strong> kini dibuka sepanjang cuti semester untuk warga USAS!

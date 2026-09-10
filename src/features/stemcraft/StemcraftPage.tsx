@@ -14,6 +14,7 @@ import {
   Users,
 } from 'lucide-react'
 import ScrollToTop from '@/features/landing/components/ScrollToTop'
+import MinecraftTransition from './components/MinecraftTransition'
 
 interface TimeLeft {
   days: number
@@ -158,12 +159,18 @@ export default function StemcraftPage() {
     },
   ]
 
-  const navigateToHome = () => {
-    window.location.href = '/'
+  const navigateToHome = (e?: React.MouseEvent) => {
+    if (e) e.preventDefault()
+    window.history.pushState({}, '', '/')
+    window.dispatchEvent(new PopStateEvent('popstate'))
+    window.scrollTo({ top: 0, behavior: 'instant' })
   }
 
   return (
     <div className="min-h-screen bg-[#06070a] text-slate-100 selection:bg-emerald-500/30 selection:text-emerald-200">
+      {/* Minecraft Pixelated Entrance Transition */}
+      <MinecraftTransition />
+
       {/* Subtle ambient lighting */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-96 w-full max-w-3xl rounded-full bg-emerald-500/[0.07] blur-[120px]" />
@@ -183,7 +190,7 @@ export default function StemcraftPage() {
               <span>STEM</span>
             </button>
             <div className="h-4 w-[1px] bg-white/10" />
-            <span className="font-pixel text-xs tracking-wider text-emerald-400 sm:text-sm">STEMCRAFT</span>
+            <span className="font-display text-sm font-bold tracking-tight text-white">STEM USAS</span>
           </div>
 
           <div className="flex items-center gap-2.5">
@@ -219,17 +226,24 @@ export default function StemcraftPage() {
           <h1 className="flex items-center justify-center gap-2.5 sm:gap-3 font-display text-3xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
             {/* Minecraft Grass Block Logo */}
             <svg
-              className="h-8 w-8 sm:h-12 sm:w-12 shrink-0 drop-shadow-[0_0_12px_rgba(52,211,153,0.35)]"
+              className="h-8 w-8 sm:h-12 sm:w-12 shrink-0 drop-shadow-[0_0_16px_rgba(52,211,153,0.4)]"
               viewBox="0 0 32 32"
               fill="none"
               aria-label="Minecraft Logo"
             >
-              <polygon points="16,2 30,10 16,18 2,10" fill="#48B534" />
-              <polygon points="16,2 23,6 16,10 9,6" fill="#5CD444" />
-              <polygon points="2,10 16,18 16,30 2,22" fill="#724B2C" />
-              <polygon points="16,18 30,10 30,22 16,30" fill="#593A22" />
-              <polygon points="2,10 16,18 16,21 14,20 12,22 8,19 6,21 2,18" fill="#48B534" />
-              <polygon points="16,18 30,10 30,18 26,21 24,19 20,22 18,20 16,21" fill="#3D9B2B" />
+              {/* Top Face - Grass */}
+              <polygon points="16,3 27.5,9.5 16,16 4.5,9.5" fill="#48B534" />
+              <polygon points="16,4.5 23.5,9 16,13.5 8.5,9" fill="#5CD444" />
+
+              {/* Left Face - Dirt Base */}
+              <polygon points="4.5,9.5 16,16 16,29 4.5,22.5" fill="#724B2C" />
+              {/* Left Face - Grass Drips */}
+              <polygon points="4.5,9.5 16,16 16,19 14,18 12,20 9,17.5 7,19 4.5,16.5" fill="#48B534" />
+
+              {/* Right Face - Dirt Base (Shadow) */}
+              <polygon points="16,16 27.5,9.5 27.5,22.5 16,29" fill="#593A22" />
+              {/* Right Face - Grass Drips (Shadow) */}
+              <polygon points="16,16 27.5,9.5 27.5,16.5 25,19 23,17.5 20,20 18,18 16,19" fill="#3D9B2B" />
             </svg>
             <span>
               STEM<span className="text-emerald-400">CRAFT</span>
@@ -248,7 +262,7 @@ export default function StemcraftPage() {
             <span className="tracking-wider uppercase text-[11px]">Baki Masa Server Dibuka</span>
           </div>
 
-          <div className="flex items-center justify-center gap-2 sm:gap-4 font-pixel text-xl sm:text-3xl text-amber-400">
+          <div className="flex items-center justify-center gap-2 sm:gap-4 font-mono text-2xl sm:text-4xl font-bold text-amber-400 tracking-tight">
             <div className="flex flex-col items-center">
               <span>{String(timeLeft.days).padStart(2, '0')}</span>
               <span className="font-mono text-[9px] text-slate-400 tracking-widest mt-1">HARI</span>
@@ -279,7 +293,7 @@ export default function StemcraftPage() {
         <section className="mt-8 sm:mt-12">
           <div className="overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-md">
             <div className="flex items-center justify-between border-b border-white/[0.06] px-4 py-3 sm:px-6">
-              <div className="flex items-center gap-2 font-pixel text-xs text-emerald-400">
+              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-400">
                 <Server size={14} />
                 <span>MAKLUMAT SERVER</span>
               </div>
@@ -391,7 +405,7 @@ export default function StemcraftPage() {
 
                     {/* Penerangan */}
                     <div className="w-full md:w-1/2 flex flex-col justify-center">
-                      <div className="inline-flex items-center gap-1.5 font-pixel text-[10px] text-amber-400 mb-1.5">
+                      <div className="inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-amber-400 mb-1.5">
                         <span>LANGKAH {s.step}</span>
                       </div>
                       <h3 className="font-display text-base sm:text-lg font-bold text-white">
@@ -411,7 +425,7 @@ export default function StemcraftPage() {
         {/* DISTINCT MINIMALIST WORLD PREVIEW (NO BORDER) */}
         <section className="mt-12 sm:mt-16">
           <div className="text-center mb-4">
-            <span className="font-pixel text-[10px] text-emerald-400 tracking-wider">DUNIA SURVIVAL</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-emerald-400">DUNIA SURVIVAL</span>
             <h3 className="mt-1 font-display text-base sm:text-lg font-bold text-white">
               Gambaran Dunia STEMcraft
             </h3>
@@ -439,7 +453,7 @@ export default function StemcraftPage() {
         {/* SERVER RULES */}
         <section className="mt-12 sm:mt-16">
           <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 sm:p-6">
-            <div className="flex items-center gap-2 font-pixel text-xs text-amber-400">
+            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-400">
               <ShieldCheck size={16} />
               <span>PERATURAN SERVER</span>
             </div>
@@ -469,7 +483,7 @@ export default function StemcraftPage() {
         {/* FAQ SECTION (ANIMATED ACCORDION) */}
         <section className="mt-12 sm:mt-16">
           <div className="text-center">
-            <div className="inline-flex items-center gap-1.5 font-pixel text-xs text-slate-400">
+            <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-slate-400">
               <HelpCircle size={14} />
               <span>SOALAN LAZIM</span>
             </div>
