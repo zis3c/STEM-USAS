@@ -1,6 +1,14 @@
 import { useState } from 'react'
 import { Gamepad2, ArrowRight, X } from 'lucide-react'
 
+const ANNOUNCEMENTS = [
+  'Server Minecraft rasmi STEMcraft kini dibuka sepanjang cuti semester untuk warga USAS!',
+  'Sertai dunia survival komuniti mahasiswa USAS percuma tanpa sebarang VPN',
+  'Alamat: roosevelt-paolo.tun.ply.gg • Port: 47529 (Bedrock & Pocket Edition)',
+  'Bina impian, teroka sumber, & santai bersama rakan kampus sepanjang cuti semester',
+  'Pelayan santai 24/7 dibawakan khas oleh pasukan STEM USAS Tech Team',
+]
+
 export default function StemcraftBanner() {
   const [closed, setClosed] = useState(false)
 
@@ -16,7 +24,7 @@ export default function StemcraftBanner() {
   return (
     <div className="relative border-b border-emerald-500/30 bg-[#061426]/95 backdrop-blur-md px-3 py-1.5 text-xs text-slate-200">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3">
-        <div className="flex items-center gap-2 overflow-hidden truncate">
+        <div className="flex items-center gap-2 overflow-hidden flex-1 min-w-0">
           <span
             className="flex shrink-0 items-center justify-center rounded-full bg-emerald-500/15 p-1 text-emerald-400 border border-emerald-500/30"
             title="EVENT CUTI"
@@ -24,9 +32,26 @@ export default function StemcraftBanner() {
           >
             <Gamepad2 size={13} />
           </span>
-          <span className="truncate text-slate-300 text-[11px] sm:text-xs">
-            Server Minecraft rasmi <strong className="text-white font-semibold">STEMcraft</strong> kini dibuka sepanjang cuti semester untuk warga USAS!
-          </span>
+          <div className="relative flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] flex">
+            {/* Track 1 */}
+            <div className="animate-ticker flex shrink-0 items-center gap-6 pr-6 text-[11px] sm:text-xs text-slate-300">
+              {ANNOUNCEMENTS.map((text, i) => (
+                <span key={`a-${i}`} className="inline-flex items-center gap-6">
+                  <span>{text}</span>
+                  <span aria-hidden="true" className="text-emerald-400/80 font-mono">✦</span>
+                </span>
+              ))}
+            </div>
+            {/* Track 2 (Exact Clone for 100% Seamless Infinite Loop) */}
+            <div className="animate-ticker flex shrink-0 items-center gap-6 pr-6 text-[11px] sm:text-xs text-slate-300" aria-hidden="true">
+              {ANNOUNCEMENTS.map((text, i) => (
+                <span key={`b-${i}`} className="inline-flex items-center gap-6">
+                  <span>{text}</span>
+                  <span aria-hidden="true" className="text-emerald-400/80 font-mono">✦</span>
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="flex shrink-0 items-center gap-2">

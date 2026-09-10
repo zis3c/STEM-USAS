@@ -102,15 +102,19 @@ export default function Footer() {
           <p className="text-[11px] leading-relaxed text-stem-muted text-center md:text-left">
             © {year} STEM USAS • Persatuan Sains Teknologi & Multimedia. {t.footer.rights}
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-2">
+          <div className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-2.5">
             <button
               onClick={() => window.dispatchEvent(new CustomEvent('trigger-matrix'))}
-              className="font-mono text-[9px] uppercase tracking-widest text-stem-muted/40 transition hover:text-emerald-400 focus:outline-none"
+              className="inline-flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-widest text-stem-muted/60 transition hover:text-emerald-400 focus:outline-none"
               title="Override System"
             >
-              System: Online
+              <span className="relative flex h-1.5 w-1.5 shrink-0">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
+              </span>
+              <span className="leading-none">System: Online</span>
             </button>
-            <span className="text-white/10">•</span>
+            <span className="hidden text-white/10 sm:inline">•</span>
             <p className="font-mono text-[10px] uppercase tracking-widest text-white/30 text-center">
               {t.footer.made}
             </p>

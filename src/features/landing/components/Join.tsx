@@ -53,13 +53,13 @@ export default function Join() {
       </Reveal>
 
       <Reveal delay={250} className="mx-auto mt-8 max-w-3xl">
-        <div className="flex items-center justify-center gap-2 text-sm text-stem-muted">
-          <MapPin size={15} className="shrink-0 text-stem-gold" />
-          <span>
-            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-stem-gold">
-              {t.join.locationLabel}
-            </span>
-            <span className="mx-2 text-white/20">•</span>
+        <div className="flex flex-col items-center justify-center gap-1.5 text-center text-xs text-stem-muted sm:flex-row sm:gap-2 sm:text-sm">
+          <div className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-stem-gold sm:text-[11px]">
+            <MapPin size={14} className="shrink-0 text-stem-gold" />
+            <span>{t.join.locationLabel}</span>
+          </div>
+          <span className="hidden sm:inline text-white/20">•</span>
+          <span className="text-slate-300">
             {t.join.location}
           </span>
         </div>

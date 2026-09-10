@@ -94,6 +94,24 @@ body {
   animation: dramaticReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.animate-ticker {
+  display: flex;
+  flex-shrink: 0;
+  white-space: nowrap;
+  animation: ticker 45s linear infinite;
+}
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
 @keyframes minecraftBlockBreak {
   0% {
     transform: scale(1);

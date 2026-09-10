@@ -189,8 +189,6 @@ export default function StemcraftPage() {
               <ArrowLeft size={14} className="text-slate-400" />
               <span>STEM</span>
             </button>
-            <div className="h-4 w-[1px] bg-white/10" />
-            <span className="font-display text-sm font-bold tracking-tight text-white">STEM USAS</span>
           </div>
 
           <div className="flex items-center gap-2.5">
