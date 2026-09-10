@@ -9,7 +9,9 @@ export default function ScrollProgress() {
       const el = barRef.current
       if (el) {
         const h = document.documentElement
-        const p = h.scrollTop / (h.scrollHeight - h.clientHeight || 1)
+        const max = h.scrollHeight - window.innerHeight
+        const top = window.scrollY || h.scrollTop || 0
+        const p = max > 0 ? Math.min(Math.max(top / max, 0), 1) : 0
         el.style.width = `${(p * 100).toFixed(2)}%`
       }
       ticking = false

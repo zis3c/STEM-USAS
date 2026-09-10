@@ -13,6 +13,7 @@ import {
   ZoomIn,
   Users,
 } from 'lucide-react'
+import ScrollProgress from '@/features/landing/components/ScrollProgress'
 import ScrollToTop from '@/features/landing/components/ScrollToTop'
 import MinecraftTransition from './components/MinecraftTransition'
 
@@ -168,6 +169,9 @@ export default function StemcraftPage() {
 
   return (
     <div className="min-h-screen bg-[#06070a] text-slate-100 selection:bg-emerald-500/30 selection:text-emerald-200">
+      {/* Top Gold Scroll Progress Indicator */}
+      <ScrollProgress />
+
       {/* Minecraft Pixelated Entrance Transition */}
       <MinecraftTransition />
 
