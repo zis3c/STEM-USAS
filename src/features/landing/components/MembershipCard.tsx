@@ -9,7 +9,7 @@ export default function MembershipCard() {
   const decodeRef = useRef<HTMLDivElement>(null)
   const [tiltStyle, setTiltStyle] = useState({ transform: 'perspective(1200px) rotateX(0deg) rotateY(0deg) scale(1)' })
   
-  const targetId = 'STEM-26-0420-XD'
+  const targetId = 'STEM(25/26)0067'
 
   useEffect(() => {
     // Decoding effect logic
