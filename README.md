@@ -2,11 +2,12 @@
 
 ![STEM USAS Web Preview](docs/preview.png)
 
-Welcome to the official web repository for **Persatuan Sains, Teknologi & Multimedia (STEM) Universiti Sultan Azlan Shah (USAS)**. 
+Welcome to the official web repository for **Persatuan Sains, Teknologi & Multimedia (STEM) Universiti Sultan Azlan Shah (USAS)**.
 
 This project is a high-performance, single-page application (SPA) designed to showcase the club's initiatives, active projects, and to facilitate new member registrations and web hosting requests.
 
 ## Core Features
+
 - **Bilingual Support:** Fully localized in English (EN) and Bahasa Malaysia (MS).
 - **Glassmorphic UI:** High-end modern styling with glowing gradients and backdrop blurs.
 - **Smooth Scrolling:** Powered by Lenis for buttery-smooth scrolling physics.
@@ -16,6 +17,7 @@ This project is a high-performance, single-page application (SPA) designed to sh
 ## Tech Stack
 
 **Frontend Architecture**
+
 - [React 18](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
 - [Tailwind CSS 3](https://tailwindcss.com/)
@@ -29,6 +31,7 @@ This project is a high-performance, single-page application (SPA) designed to sh
 Follow these quick steps to get a local copy of the STEM USAS landing page up and running.
 
 ### Prerequisites
+
 - Node.js (v18.0.0 or higher recommended)
 - npm, yarn, or pnpm
 - Git
@@ -36,18 +39,21 @@ Follow these quick steps to get a local copy of the STEM USAS landing page up an
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/zis3c/STEM-USAS.git
    cd STEM-USAS
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Run the Application**
    Launch the development server with Hot Module Replacement (HMR).
+
    ```bash
    npm run dev
    ```

@@ -16,6 +16,7 @@ If you discover any security-related issues (e.g., exposed API keys, cross-site 
 Instead, please report the vulnerability directly to the Tech Lead via Telegram at [t.me/STEMUSAS](https://t.me/STEMUSAS) or direct message to the current repository owner (`@zis3c`).
 
 We will:
+
 1. Acknowledge the receipt of your vulnerability report.
 2. Provide an estimated timeline for addressing the vulnerability.
 3. Notify you when the vulnerability has been patched.

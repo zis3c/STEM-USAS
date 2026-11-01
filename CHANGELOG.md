@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.0] - Initial Release
 
 ### Added
+
 - Complete single-page application (SPA) architecture using React and Vite.
 - Glassmorphic UI design system with custom Tailwind CSS configurations.
 - Full bilingual support (English and Bahasa Malaysia) using custom Context provider.
