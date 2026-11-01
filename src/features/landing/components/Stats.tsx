@@ -41,12 +41,6 @@ export default function Stats() {
   const [membersCount, setMembersCount] = useState(120)
 
   useEffect(() => {
-    // NOTE: Ganti URL ini dengan API endpoint dari Google Sheets / Telebot korang.
-    // fetch('https://api.stemusas.com/members')
-    //   .then(res => res.json())
-    //   .then(data => setMembersCount(data.total))
-    
-    // Simulate live dynamic update
     const timer = setTimeout(() => {
       setMembersCount(185)
     }, 2500)

@@ -37,7 +37,6 @@ export default function EasterEgg() {
     }
   }, [])
 
-  // Lock scroll when active
   useEffect(() => {
     if (active) {
       const originalOverflow = document.body.style.overflow
@@ -58,9 +57,7 @@ export default function EasterEgg() {
     >
       <MatrixRain />
 
-      {/* Cyberpunk Terminal Window HUD */}
       <div className="relative z-10 w-[90vw] max-w-sm sm:max-w-md rounded-2xl border border-emerald-500/35 bg-[#060a14]/95 p-5 sm:p-6 shadow-[0_0_60px_rgba(16,185,129,0.3)] backdrop-blur-2xl">
-        {/* Terminal Header */}
         <div className="flex items-center justify-between border-b border-emerald-500/20 pb-3 mb-4">
           <div className="flex items-center gap-1.5">
             <span className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
@@ -71,7 +68,6 @@ export default function EasterEgg() {
           <span className="font-mono text-[9px] uppercase tracking-widest text-emerald-400/60">NODE_01</span>
         </div>
 
-        {/* Terminal Content */}
         <div className="space-y-3 font-mono">
           <div className="text-[11px] text-emerald-400/70">
             &gt; core_diagnostic --auth=OK

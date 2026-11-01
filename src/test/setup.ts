@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom'
 import { vi } from 'vitest'
 
-// Mock IntersectionObserver for JSDOM using a class
+// JSDOM does not implement IntersectionObserver, which Reveal and useInView require at mount.
 class MockIntersectionObserver {
   observe = vi.fn()
   unobserve = vi.fn()

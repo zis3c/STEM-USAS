@@ -33,7 +33,6 @@ export default function StemcraftBanner() {
             <Gamepad2 size={13} />
           </span>
           <div className="relative flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] flex">
-            {/* Track 1 */}
             <div className="animate-ticker flex shrink-0 items-center gap-6 pr-6 text-[11px] sm:text-xs text-slate-300">
               {ANNOUNCEMENTS.map((text, i) => (
                 <span key={`a-${i}`} className="inline-flex items-center gap-6">
@@ -42,7 +41,7 @@ export default function StemcraftBanner() {
                 </span>
               ))}
             </div>
-            {/* Track 2 (Exact Clone for 100% Seamless Infinite Loop) */}
+            {/* Duplicate track required for a continuous marquee loop without a gap */}
             <div className="animate-ticker flex shrink-0 items-center gap-6 pr-6 text-[11px] sm:text-xs text-slate-300" aria-hidden="true">
               {ANNOUNCEMENTS.map((text, i) => (
                 <span key={`b-${i}`} className="inline-flex items-center gap-6">

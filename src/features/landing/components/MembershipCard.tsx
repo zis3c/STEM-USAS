@@ -12,7 +12,6 @@ export default function MembershipCard() {
   const targetId = 'STEM(25/26)0067'
 
   useEffect(() => {
-    // Decoding effect logic
     const el = decodeRef.current
     if (!el) return
     const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
@@ -91,7 +90,6 @@ export default function MembershipCard() {
         
         <Reveal delay={200}>
           <div className="mt-16 flex justify-center perspective-[1200px]">
-            {/* Exactly Matching Card Container */}
             <div 
               ref={cardRef}
               onPointerMove={handlePointerMove}
@@ -105,7 +103,6 @@ export default function MembershipCard() {
               }}
               className="relative w-full max-w-[480px] rounded-[20px] transition-transform duration-200 ease-out select-none touch-none overflow-hidden"
             >
-              {/* Grid Background Overlay */}
               <div 
                 className="absolute inset-0 pointer-events-none z-[1]" 
                 style={{
@@ -115,11 +112,9 @@ export default function MembershipCard() {
                 }}
               />
 
-              {/* Shimmer Overlay */}
               <div className="absolute -top-[30%] -bottom-[30%] -left-[180%] w-[240%] z-[5] pointer-events-none animate-shimmer bg-[linear-gradient(105deg,transparent_44%,rgba(255,255,255,0.04)_47%,rgba(255,255,255,0.12)_50%,rgba(255,255,255,0.04)_53%,transparent_56%)]" />
 
               <div className="relative z-10 px-[22px] pt-[24px] pb-[20px]">
-                {/* Header */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-[10px]">
                     <img 
@@ -136,7 +131,6 @@ export default function MembershipCard() {
                   </div>
                 </div>
 
-                {/* Membership ID */}
                 <div className="mb-[14px]">
                   <div className="text-[9px] font-semibold tracking-[0.14em] uppercase text-slate-400/60 mb-1.5">
                     Membership ID
@@ -149,7 +143,6 @@ export default function MembershipCard() {
                   </div>
                 </div>
 
-                {/* Identity Row */}
                 <div className="flex items-end justify-between gap-3 flex-wrap mb-4">
                   <div>
                     <div className="text-[9px] font-semibold tracking-[0.12em] uppercase text-slate-400/50 mb-[3px]">Card Holder</div>
@@ -161,7 +154,6 @@ export default function MembershipCard() {
                   </div>
                 </div>
 
-                {/* Details Grid */}
                 <div className="grid grid-cols-2 border-t border-slate-400/[0.08] pt-[14px]">
                   <div className="py-1.5">
                     <div className="text-[9px] font-semibold tracking-[0.1em] uppercase text-slate-400/[0.45] mb-[2px]">Program</div>
@@ -182,7 +174,6 @@ export default function MembershipCard() {
                 </div>
               </div>
 
-              {/* Footer */}
               <div className="flex items-center justify-between px-[22px] py-[12px] bg-black/20 border-t border-slate-400/[0.06]">
                 <span className="text-[10px] text-slate-400/40 font-medium tracking-[0.02em]">STEM USAS • Digital Member Card</span>
                 <div className="flex gap-[3px]">

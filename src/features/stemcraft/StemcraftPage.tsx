@@ -169,19 +169,15 @@ export default function StemcraftPage() {
 
   return (
     <div className="min-h-screen bg-[#06070a] text-slate-100 selection:bg-emerald-500/30 selection:text-emerald-200">
-      {/* Top Gold Scroll Progress Indicator */}
       <ScrollProgress />
 
-      {/* Minecraft Pixelated Entrance Transition */}
       <MinecraftTransition />
 
-      {/* Subtle ambient lighting */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-96 w-full max-w-3xl rounded-full bg-emerald-500/[0.07] blur-[120px]" />
         <div className="absolute bottom-10 right-0 h-80 w-80 rounded-full bg-amber-500/[0.07] blur-[130px]" />
       </div>
 
-      {/* Top Header */}
       <header className="sticky top-0 z-40 border-b border-white/[0.08] bg-[#06070a]/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-3 sm:px-6 sm:py-3.5">
           <div className="flex items-center gap-2.5 sm:gap-3">
@@ -196,7 +192,6 @@ export default function StemcraftPage() {
           </div>
 
           <div className="flex items-center gap-2.5">
-            {/* Unified Status Pill */}
             <div className={`flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-medium ${statusLoading ? 'border-amber-500/30 bg-amber-500/10 text-amber-300' : serverStatus.online ? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-400' : 'border-red-500/30 bg-red-500/10 text-red-300'}`}>
               <span className="flex items-center gap-1.5">
                 <span className={`h-1.5 w-1.5 rounded-full ${statusLoading ? 'bg-amber-400 animate-pulse' : serverStatus.online ? 'bg-emerald-400 animate-pulse' : 'bg-red-400'}`} />
@@ -223,10 +218,8 @@ export default function StemcraftPage() {
       </header>
 
       <main className="relative mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12">
-        {/* HERO SECTION */}
         <section className="text-center">
           <h1 className="flex items-center justify-center gap-2.5 sm:gap-3 font-display text-3xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
-            {/* Minecraft Grass Block Logo */}
             <svg
               className="h-8 w-8 sm:h-12 sm:w-12 shrink-0 drop-shadow-[0_0_16px_rgba(52,211,153,0.4)]"
               viewBox="0 0 32 32"
@@ -257,7 +250,6 @@ export default function StemcraftPage() {
           </p>
         </section>
 
-        {/* ULTRA-MINIMALIST COUNTDOWN */}
         <section className="mt-8 text-center">
           <div className="inline-flex items-center gap-1.5 text-xs font-mono text-amber-400/90 mb-3">
             <Clock size={13} />
@@ -291,7 +283,6 @@ export default function StemcraftPage() {
           </p>
         </section>
 
-        {/* MINIMALIST SERVER DETAILS TABLE */}
         <section className="mt-8 sm:mt-12">
           <div className="overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-md">
             <div className="flex items-center justify-between border-b border-white/[0.06] px-4 py-3 sm:px-6">
@@ -303,7 +294,6 @@ export default function StemcraftPage() {
             </div>
 
             <div className="divide-y divide-white/[0.06] text-xs sm:text-sm">
-              {/* Server Name */}
               <div className="flex items-center justify-between px-4 py-3.5 sm:px-6 hover:bg-white/[0.02] transition">
                 <span className="font-mono text-slate-400">Server Name</span>
                 <div className="flex items-center gap-2">
@@ -319,7 +309,6 @@ export default function StemcraftPage() {
                 </div>
               </div>
 
-              {/* Server Address */}
               <div className="flex items-center justify-between px-4 py-3.5 sm:px-6 hover:bg-white/[0.02] transition gap-3">
                 <span className="font-mono text-slate-400 shrink-0">Server Address</span>
                 <div className="flex items-center gap-2 min-w-0">
@@ -337,7 +326,6 @@ export default function StemcraftPage() {
                 </div>
               </div>
 
-              {/* Port */}
               <div className="flex items-center justify-between px-4 py-3.5 sm:px-6 hover:bg-white/[0.02] transition">
                 <span className="font-mono text-slate-400">Port</span>
                 <div className="flex items-center gap-2">
@@ -353,7 +341,6 @@ export default function StemcraftPage() {
                 </div>
               </div>
 
-              {/* Edition */}
               <div className="flex items-center justify-between px-4 py-3.5 sm:px-6 hover:bg-white/[0.02] transition">
                 <span className="font-mono text-slate-400">Edition</span>
                 <span className="text-slate-200">Bedrock (Phone &amp; PC)</span>
@@ -362,7 +349,6 @@ export default function StemcraftPage() {
           </div>
         </section>
 
-        {/* STEP-BY-STEP TUTORIAL (ZIG-ZAG ALTERNATING LAYOUT, BORDERLESS) */}
         <section className="mt-10 sm:mt-14">
           <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
             <div className="flex items-center gap-2">
@@ -387,7 +373,6 @@ export default function StemcraftPage() {
                       isEven ? 'md:flex-row-reverse' : 'md:flex-row'
                     }`}
                   >
-                    {/* Gambar (Transparent, No Border, No Black Background) */}
                     <div
                       className="w-full md:w-1/2 relative cursor-zoom-in overflow-hidden rounded-xl group shrink-0"
                       onClick={() => setSelectedImage(s.img)}
@@ -405,7 +390,6 @@ export default function StemcraftPage() {
                       </div>
                     </div>
 
-                    {/* Penerangan */}
                     <div className="w-full md:w-1/2 flex flex-col justify-center">
                       <div className="inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-amber-400 mb-1.5">
                         <span>LANGKAH {s.step}</span>
@@ -424,7 +408,6 @@ export default function StemcraftPage() {
           </div>
         </section>
 
-        {/* DISTINCT MINIMALIST WORLD PREVIEW (NO BORDER) */}
         <section className="mt-12 sm:mt-16">
           <div className="text-center mb-4">
             <span className="text-xs font-semibold uppercase tracking-wider text-emerald-400">DUNIA SURVIVAL</span>
@@ -452,7 +435,6 @@ export default function StemcraftPage() {
           </div>
         </section>
 
-        {/* SERVER RULES */}
         <section className="mt-12 sm:mt-16">
           <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 sm:p-6">
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-400">
@@ -482,7 +464,6 @@ export default function StemcraftPage() {
           </div>
         </section>
 
-        {/* FAQ SECTION (ANIMATED ACCORDION) */}
         <section className="mt-12 sm:mt-16">
           <div className="text-center">
             <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-slate-400">
@@ -534,12 +515,10 @@ export default function StemcraftPage() {
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="border-t border-white/[0.08] bg-[#03060f] px-4 py-8 text-center text-xs text-slate-400">
         <p className="leading-relaxed">© {new Date().getFullYear()} STEM USAS. Minecraft hak milik Mojang Synergies AB.</p>
       </footer>
 
-      {/* LIGHTBOX MODAL */}
       {selectedImage && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
@@ -562,7 +541,6 @@ export default function StemcraftPage() {
         </div>
       )}
 
-      {/* Scroll To Top */}
       <ScrollToTop />
     </div>
   )

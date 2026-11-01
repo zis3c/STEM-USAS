@@ -55,7 +55,6 @@ export default function MinecraftTransition() {
 
   return (
     <div className="pointer-events-none fixed inset-0 z-50 flex flex-wrap content-start overflow-hidden bg-transparent">
-      {/* 100% True Equal-Dimension Square Pixel Blocks (aspect-square) */}
       {blocks.map((b) => (
         <div
           key={b.id}
