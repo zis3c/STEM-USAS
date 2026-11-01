@@ -57,13 +57,13 @@ describe('STEM Web Core Suite', () => {
         <Faq />
       </LanguageProvider>
     )
-    expect(screen.getByText(translations.en.hero.titleB)).toBeInTheDocument()
-    expect(screen.getByText(translations.en.about.title)).toBeInTheDocument()
-    expect(screen.getByText('STEM Telebot')).toBeInTheDocument()
+    expect(screen.getByText(translations.en.hero.titleB)).toBeTruthy()
+    expect(screen.getByText(translations.en.about.title)).toBeTruthy()
+    expect(screen.getByText('STEM Telebot')).toBeTruthy()
 
     const secondFaqButton = screen.getByText(translations.en.faq.items[1].q)
     fireEvent.click(secondFaqButton)
-    expect(screen.getByText(translations.en.faq.items[1].a)).toBeInTheDocument()
+    expect(screen.getByText(translations.en.faq.items[1].a)).toBeTruthy()
   })
 
   it('maintains parity between English and Malay translation keys', () => {
