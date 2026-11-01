@@ -7,11 +7,11 @@ Welcome to the official web repository for **Persatuan Sains, Teknologi & Multim
 This project is a high-performance, single-page application (SPA) designed to showcase the club's initiatives, active projects, and to facilitate new member registrations and web hosting requests.
 
 ## Core Features
-* **Bilingual Support:** Fully localized in English (EN) and Bahasa Malaysia (MS).
-* **Glassmorphic UI:** High-end modern styling with glowing gradients and backdrop blurs.
-* **Smooth Scrolling:** Powered by Lenis for buttery-smooth scrolling physics.
-* **Responsive Design:** Fully optimized for mobile, tablet, and desktop viewing.
-* **Easter Eggs:** Secret interactive elements hidden for the tech-savvy.
+- **Bilingual Support:** Fully localized in English (EN) and Bahasa Malaysia (MS).
+- **Glassmorphic UI:** High-end modern styling with glowing gradients and backdrop blurs.
+- **Smooth Scrolling:** Powered by Lenis for buttery-smooth scrolling physics.
+- **Responsive Design:** Fully optimized for mobile, tablet, and desktop viewing.
+- **Easter Eggs:** Secret interactive elements hidden for the tech-savvy.
 
 ## Tech Stack
 
@@ -29,9 +29,9 @@ This project is a high-performance, single-page application (SPA) designed to sh
 Follow these quick steps to get a local copy of the STEM USAS landing page up and running.
 
 ### Prerequisites
-* Node.js (v18.0.0 or higher recommended)
-* npm, yarn, or pnpm
-* Git
+- Node.js (v18.0.0 or higher recommended)
+- npm, yarn, or pnpm
+- Git
 
 ### Installation
 

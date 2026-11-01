@@ -33,10 +33,9 @@ export default function Faq() {
                 <div
                   className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}
                 >
-                  <p 
-                    className="px-6 pb-6 text-sm leading-relaxed text-stem-muted"
-                    dangerouslySetInnerHTML={{ __html: item.a }}
-                  />
+                  <p className="px-6 pb-6 text-sm leading-relaxed text-stem-muted">
+                    {item.a}
+                  </p>
                 </div>
               </div>
             </Reveal>

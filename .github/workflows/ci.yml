@@ -5,6 +5,14 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build-and-test:
@@ -15,19 +23,24 @@ jobs:
         node-version: [20.x, 22.x]
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
 
-    - name: Install dependencies
-      run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Run Unit Tests
-      run: npm run test -- --run
+      - name: Lint & Security Lint
+        run: |
+          npm run lint
+          npm run lint:security
 
-    - name: Type Check & Build
-      run: npm run build
+      - name: Run Unit Tests
+        run: npm run test:unit
+
+      - name: Type Check & Build
+        run: npm run build

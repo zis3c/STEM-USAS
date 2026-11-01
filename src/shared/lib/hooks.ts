@@ -43,7 +43,7 @@ export function useCountUp(target: number, active: boolean, duration = 1600) {
   return value
 }
 
-const STABLE = /[\s&.,•—–\-]/
+const STABLE = /[\s&.,•—–-]/
 
 export function useDecodeText(text: string, active = true) {
   const [out, setOut] = useState(text)
