@@ -7,7 +7,7 @@ import TiltCard from './TiltCard'
 export default function Projects() {
   const { t } = useLang()
 
-  const images = ['/logo.png', '/project-notifier.png', '/project-timetable.png']
+  const images = ['/logo.png', '/project-notifier.png', '/usas-logo.png']
 
   return (
     <section id="projects" className="relative mx-auto max-w-6xl px-4 py-24 md:px-6 md:py-32">

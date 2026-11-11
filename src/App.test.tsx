@@ -2,7 +2,6 @@ import { describe, it, expect, beforeEach } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { LanguageProvider, useLang } from './shared/i18n/LanguageContext'
 import { translations } from './shared/i18n/translations'
-import Team from './features/landing/components/Team'
 import Faq from './features/landing/components/Faq'
 import Hero from './features/landing/components/Hero'
 import About from './features/landing/components/About'
@@ -22,15 +21,6 @@ function LangToggleProbe() {
 describe('STEM Web Core Suite', () => {
   beforeEach(() => {
     localStorage.clear()
-  })
-
-  it('renders team section correctly', () => {
-    const { container } = render(
-      <LanguageProvider>
-        <Team />
-      </LanguageProvider>
-    )
-    expect(container).toBeTruthy()
   })
 
   it('switches language between English and Malay and persists to localStorage', () => {

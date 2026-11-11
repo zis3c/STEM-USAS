@@ -10,7 +10,6 @@ export default function Footer() {
     { id: 'about', label: t.nav.about },
     { id: 'programs', label: t.nav.programs },
     { id: 'projects', label: t.nav.projects },
-    { id: 'team', label: t.nav.team },
     { id: 'faq', label: t.nav.faq },
     { id: 'join', label: t.nav.join },
   ]

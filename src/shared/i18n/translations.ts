@@ -6,7 +6,6 @@ const en = {
     programs: 'Programs',
     projects: 'Projects',
     hosting: 'Hosting',
-    team: 'Team',
     faq: 'FAQ',
     join: 'Join Us',
     cta: 'Join STEM',
@@ -165,16 +164,6 @@ const en = {
     rights: 'All rights reserved.',
     made: 'Designed & built by the STEM Tech Team',
   },
-  team: {
-    eyebrow: 'OUR TEAM',
-    title: 'Meet the minds behind STEM',
-    sub: 'Passionate students building the tech ecosystem in USAS.',
-    roles: {
-      president: 'President',
-      pa: 'PA President',
-      secretary: 'Secretary',
-    },
-  },
   faq: {
     eyebrow: 'FAQ',
     title: 'Got questions? We got answers.',
@@ -208,7 +197,6 @@ const ms: Dict = {
     programs: 'Program',
     projects: 'Projek',
     hosting: 'Hosting',
-    team: 'Pasukan',
     faq: 'FAQ',
     join: 'Sertai',
     cta: 'Sertai STEM',
@@ -366,16 +354,6 @@ const ms: Dict = {
     tagline: 'Dibina oleh pelajar, dipacu sifat ingin tahu.',
     rights: 'Hak cipta terpelihara.',
     made: 'Direka & dibina oleh Pasukan Teknologi STEM',
-  },
-  team: {
-    eyebrow: 'PASUKAN KAMI',
-    title: 'Kenali barisan pimpinan STEM',
-    sub: 'Pelajar bersemangat yang membina ekosistem teknologi di USAS.',
-    roles: {
-      president: 'Presiden',
-      pa: 'PA Presiden',
-      secretary: 'Setiausaha',
-    },
   },
   faq: {
     eyebrow: 'SOALAN LAZIM',
