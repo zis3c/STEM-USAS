@@ -1,0 +1,31 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    # Keep the repo PR-free; Dependabot alerts still notify.
+    open-pull-requests-limit: 0
+    groups:
+      actions:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 0
+    commit-message:
+      prefix: "build(deps)"
+    groups:
+      npm:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+      react:
+        patterns: ["react", "react-dom", "@types/react", "@types/react-dom"]
+      vite:
+        patterns: ["vite", "@vitejs/*", "vitest", "@vitest/*"]
+    ignore:
+      - dependency-name: "typescript"
+        versions: [">= 6.1.0"]

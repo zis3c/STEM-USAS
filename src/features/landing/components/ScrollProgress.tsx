@@ -1,0 +1,38 @@
+import { useEffect, useRef } from 'react'
+
+export default function ScrollProgress() {
+  const barRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    let ticking = false
+    const update = () => {
+      const el = barRef.current
+      if (el) {
+        const h = document.documentElement
+        const max = h.scrollHeight - window.innerHeight
+        const top = window.scrollY || h.scrollTop || 0
+        const p = max > 0 ? Math.min(Math.max(top / max, 0), 1) : 0
+        el.style.width = `${(p * 100).toFixed(2)}%`
+      }
+      ticking = false
+    }
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true
+        requestAnimationFrame(update)
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    update()
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  return (
+    <div className="fixed inset-x-0 top-0 z-[70] h-[2px]">
+      <div
+        ref={barRef}
+        className="h-full w-0 bg-stem-cta shadow-[0_0_8px_rgb(var(--stem-cta)/0.5)]"
+      />
+    </div>
+  )
+}
